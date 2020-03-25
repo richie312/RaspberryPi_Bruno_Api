@@ -6,7 +6,7 @@ main_dir = os.getcwd()
 ngrok_base_url = "http://127.0.0.1:4040/api"
 
 response = requests.get(ngrok_base_url + '/tunnels')
-response_obj = response.json()
+
 
 # get the uri for videostream and bruno_app
 
