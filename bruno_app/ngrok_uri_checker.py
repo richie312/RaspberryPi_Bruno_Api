@@ -10,7 +10,7 @@ response_obj = response.json()
 
 # get the uri for videostream and bruno_app
 
-bruno_app_url = response_obj['tunnels'][0]['public_url']
+bruno_app_url = response_obj['tunnels'][3]['public_url']
 video_stream_url = response_obj['tunnels'][0]['public_url']
 
 # dump the urls in the .env files
