@@ -1,10 +1,12 @@
 #!/bin/bash
 
-echo "The program is about to start the ngrok session..."
-
-./ngrok start --all
+sh /home/pi/Downloads/ngrok.sh
 
 echo "The ngrok session has started. waiting for the public urls to be generated."
+
+echo "The script will be waitin for 30 seconds in order to generate the urls..."
+
+sleep 30
 
 echo "Python script will be executed in order to fetch and get the public urls for video streaming and bruno app."
 
