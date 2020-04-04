@@ -1,8 +1,13 @@
 import paramiko
 import gzip
+import getpass()
 user_name = 'pi'
 host='192.168.43.82'
-with open(r'C:\Users\Richie\.ssh\passwd.txt', 'r') as file:
+root = r'C:\Users\'
+sys_user = getpass.getuser()
+file_path = r'\.ssh\passwd.txt'
+target_path = root + sys_user + file_path
+with open(target_path', 'r') as file:
 	passwd = file.readlines()
 ssh_client = paramiko.SSHClient()
 
