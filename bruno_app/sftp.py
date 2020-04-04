@@ -1,6 +1,6 @@
 import paramiko
 import gzip
-import getpass()
+import getpass
 user_name = 'pi'
 host='192.168.43.82'
 root = r'C:\Users\'
