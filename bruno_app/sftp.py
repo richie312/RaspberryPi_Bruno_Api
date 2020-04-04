@@ -3,11 +3,11 @@ import gzip
 import getpass
 user_name = 'pi'
 host='192.168.43.82'
-root = r'C:\Users\'
+root = r'C:\Users'
 sys_user = getpass.getuser()
 file_path = r'\.ssh\passwd.txt'
-target_path = root + sys_user + file_path
-with open(target_path', 'r') as file:
+target_path = root + '\\' + sys_user + file_path
+with open(target_path, 'r') as file:
 	passwd = file.readlines()
 ssh_client = paramiko.SSHClient()
 
@@ -19,5 +19,5 @@ ssh_client.connect(hostname = host,
 sftp=ssh_client.open_sftp()
 
 remotepath = '/home/pi/Downloads/bruno_app/.env'
-localpath = 'D:\\RaspberryPi_Bruno_Api\\bruno_app\\.env'
+localpath = 'D:\\python_personal_proj\\RaspberryPi_Bruno_Api\\bruno_app\\.env'
 sftp.get(remotepath,localpath)
