@@ -1,6 +1,9 @@
 import paramiko
 import gzip
 import getpass
+import os
+
+proj_dir = os.getcwd()
 user_name = 'pi'
 host='192.168.43.82'
 root = r'C:\Users'
@@ -19,5 +22,5 @@ ssh_client.connect(hostname = host,
 sftp=ssh_client.open_sftp()
 
 remotepath = '/home/pi/Downloads/bruno_app/.env'
-localpath = 'D:\\python_personal_proj\\RaspberryPi_Bruno_Api\\bruno_app\\.env'
+localpath = os.path.join(proj_dir,'.env')
 sftp.get(remotepath,localpath)
